@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Medicines - DWatson Pharmacy</title>
+  <style>
+    body { font-family: Arial; background-color: #f4f4f4; text-align: center; padding: 50px; }
+    h1 { color: #333; }
+    form { display: inline-block; text-align: left; background: #fff; padding: 20px; border-radius: 10px; }
+    input, select, textarea {
+      width: 100%;
+      margin: 5px 0 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Order Your Medicines</h1>
+  <form action="process_order.php" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="branch">Select Branch for Pickup/Delivery:</label>
+    <select name="branch_id" id="branch" required>
+      <option value="1">F-6 Markaz</option>
+      <option value="2">F-7 Markaz</option>
+      <option value="3">F-10 Markaz</option>
+      <option value="4">F-11 Markaz</option>
+      <option value="5">Bhara Kahu</option>
+    </select>
+
+    <label for="medicine">Select Medicine:</label>
+    <select name="medicine_id" id="medicine" required>
+      <option value="1">2blink Eye Drop</option>
+      <option value="2">2sum 1gm Injection</option>
+      <option value="3">Ad Folic 300mcg Tablets</option>
+      <option value="4">Acdermin Gel 20gm</option>
+      <option value="5">Accutane 20mg Capsules</option>
+      <option value="6">Ablixa 10mg Tablets</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required>
+
+    <label for="payment_method">Payment Method:</label>
+    <select name="payment_method" id="payment_method" required>
+      <option value="Cash">Cash on Delivery</option>
+      <option value="Card">Credit/Debit Card</option>
+      <option value="Online">Online Transfer</option>
+    </select>
+
+    <label for="notes">Additional Notes (Optional):</label>
+    <textarea id="notes" name="notes"></textarea>
+
+    <input type="submit" value="Place Order">
+  </form>
+</body>
+</html>

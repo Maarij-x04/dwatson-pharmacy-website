@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Record Sale - Dwatson Pharmacy</title>
+</head>
+<body>
+  <h2>Record New Sale</h2>
+  <form action="record_sale.php" method="POST">
+    <!-- Customer Dropdown -->
+    <label>Customer:</label><br>
+    <select name="customer_id" required>
+      <option value="">-- Select Customer --</option>
+      <option value="1">1 - Ali Khan</option>
+      <option value="2">2 - Sara Ahmed</option>
+      <option value="3">3 - Usman Tariq</option>
+      <option value="4">4 - Ayesha Malik</option>
+      <option value="5">5 - Bilal Saeed</option>
+    </select><br><br>
+
+    <!-- Medicine Dropdown -->
+    <label>Medicine:</label><br>
+    <select name="medicine_id" required>
+      <option value="">-- Select Medicine --</option>
+      <option value="1">1 - 2blink Eye Drop 15ml</option>
+      <option value="2">2 - 2sum 1gm Injection</option>
+      <option value="3">3 - Ad Folic 300mcg Tablets</option>
+      <option value="4">4 - Acdermin Gel 20gm</option>
+      <option value="5">5 - Accutane 20mg Capsules</option>
+      <option value="6">6 - Ablixa 10mg Tablets</option>
+    </select><br><br>
+
+    <!-- Quantity -->
+    <label>Quantity:</label><br>
+    <input type="number" name="quantity" min="1" required><br><br>
+
+    <!-- Payment Method Dropdown -->
+    <label>Payment Method:</label><br>
+    <select name="payment_method" required>
+      <option value="">-- Select Method --</option>
+      <option value="Cash">Cash</option>
+      <option value="Card">Card</option>
+      <option value="Online">Online</option>
+    </select><br><br>
+
+    <input type="submit" value="Record Sale">
+  </form>
+</body>
+</html>

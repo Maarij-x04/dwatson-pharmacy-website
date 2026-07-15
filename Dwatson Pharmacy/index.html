@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DWatson Pharmacy Management</title>
+  <style>
+    body { font-family: Arial; background-color: #f4f4f4; text-align: center; padding: 50px; }
+    h1 { color: #333; }
+    a, button, input[type="submit"] {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    a:hover, button:hover, input[type="submit"]:hover { background-color: #0056b3; }
+    form { display: inline-block; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to DWatson Pharmacy</h1>
+  <p>Select your role to continue:</p>
+
+  <!-- Customer Access -->
+  <button onclick="location.href='customer_order.html'">I am a Customer</button>
+
+  <!-- Admin Access -->
+  <form action="admin_dashboard.php" method="POST">
+    <label for="admin_password">Admin Password:</label>
+    <input type="password" id="admin_password" name="admin_password" required>
+    <input type="submit" value="Login as Admin">
+  </form>
+
+  <hr>
+
+  <h2>Admin Dashboard (Direct Links)</h2>
+  <a href="add_customer.html">Add Customer</a>
+  <a href="add_medicine.html">Add Medicine</a>
+  <a href="record_sale.html">Record Sale</a>
+  <a href="viewInventory.php">View Inventory By Branch</a>
+  <a href="search_medicine.html">Search Medicine</a>
+  <a href="inventory_update.html">Update Inventory</a>
+  <a href="add_sold_item.html">Record Sold Item</a>
+  <a href="sales_report.php">View Sales Report (Dynamic)</a>
+  <a href="low_stock.php">Low Stock Alert</a>
+</body>
+</html>

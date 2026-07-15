@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Inventory by Branch</title>
+</head>
+<body>
+    <h2>Filter Inventory by Branch</h2>
+    <form action="filter_inventory.php" method="POST">
+        <label for="branch">Select Branch:</label>
+        <select name="branch_id" id="branch" required>
+            <option value="1">F-6 Markaz</option>
+            <option value="2">F-7 Markaz</option>
+            <option value="3">F-10 Markaz</option>
+            <option value="4">F-11 Markaz</option>
+            <option value="5">Bhara Kahu</option>
+        </select>
+        <br><br>
+        <input type="submit" value="View Inventory">
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Medicine - Dwatson Pharmacy</title>
+</head>
+<body>
+  <h2>Add New Medicine</h2>
+  <form action="add_medicine.php" method="POST">
+    <label>Medicine Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Brand:</label><br>
+    <input type="text" name="brand" required><br><br>
+
+    <label>Price:</label><br>
+    <input type="number" step="0.01" name="price" required><br><br>
+
+    <label>Expiry Date:</label><br>
+    <input type="date" name="expiry" required><br><br>
+
+    <!-- ✅ Dropdown for Category -->
+    <label>Category:</label><br>
+    <select name="category_id" required>
+      <option value="">-- Select Category --</option>
+      <option value="1">1 - Antibiotics</option>
+      <option value="2">2 - Painkillers</option>
+      <option value="3">3 - Vitamins & Supplements</option>
+      <option value="4">4 - Skin & Hair Care</option>
+      <option value="5">5 - Fertility & Pregnancy</option>
+      <option value="6">6 - Neurological</option>
+    </select><br><br>
+
+    <!-- ✅ Dropdown for Supplier -->
+    <label>Supplier:</label><br>
+    <select name="supplier_id" required>
+      <option value="">-- Select Supplier --</option>
+      <option value="1">1 - Pharmevo</option>
+      <option value="2">2 - Sami Pharmaceuticals</option>
+      <option value="3">3 - Atco Laboratories</option>
+      <option value="4">4 - Incepta Pharmaceuticals</option>
+      <option value="5">5 - Horizon Pharma</option>
+    </select><br><br>
+
+    <input type="submit" value="Add Medicine">
+  </form>
+</body>
+</html>

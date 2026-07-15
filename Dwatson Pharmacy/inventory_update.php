@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Inventory - DWatson Pharmacy</title>
+</head>
+<body>
+  <h2>Update Inventory for Branch</h2>
+  <form action="inventory_update.php" method="POST">
+    <label for="branch_id">Select Branch:</label>
+    <select name="branch_id" id="branch_id" required>
+      <option value="1">F-6 Markaz</option>
+      <option value="2">F-7 Markaz</option>
+      <option value="3">F-10 Markaz</option>
+      <option value="4">F-11 Markaz</option>
+      <option value="5">Bhara Kahu</option>
+    </select><br><br>
+
+    <label for="medicine_id">Select Medicine:</label>
+    <select name="medicine_id" id="medicine_id" required>
+      <option value="1">2blink Eye Drop</option>
+      <option value="2">2sum 1gm Injection</option>
+      <option value="3">Ad Folic 300mcg Tablets</option>
+      <option value="4">Acdermin Gel 20gm</option>
+      <option value="5">Accutane 20mg Capsules</option>
+      <option value="6">Ablixa 10mg Tablets</option>
+    </select><br><br>
+
+    <label for="quantity">Quantity to Add/Update:</label>
+    <input type="number" name="quantity" id="quantity" required><br><br>
+
+    <input type="submit" value="Update Inventory">
+  </form>
+
+  <hr>
+  <h3>Want to View Current Inventory by Branch?</h3>
+  <a href="filter_inventory.html"><button>🔍 View Inventory by Branch</button></a>
+</body>
+</html>
